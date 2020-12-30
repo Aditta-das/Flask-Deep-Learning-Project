@@ -1,0 +1,32 @@
+{% extends "indexchat.html" %}
+{% block body %}
+
+<div class="card-columns mx-auto d-flex justify-content-center col-6">
+	<div class="box" style="margin-top: 133px;">
+		<div class="row">
+		  <div class="col-sm-6">
+		    <div class="card" style="width: 251px;">
+		      <div class="card-body">
+		      	<div class="text-center">
+		      		<!-- <div class="col">
+		      			<img src="{{url_for('static', filename='img/driving.png')}}" style="width: 87px;" align="middle">	
+	      			</div> -->
+		      		<form action="/video_upload" method="POST" enctype="multipart/form-data" class="md-form">
+								<div class="file-field">
+								    <label class="btn btn-primary" style="margin: 12px;">
+								      <i class="fa fa-image"></i> Input Video Here<input type="file" name="file" style="display: none;">
+								    </label>
+								  <div class="file-path-wrapper" style="margin:8px;">
+								    <button type="submit" class="btn btn-dark btn-outline-success">DETECT BUTTON</button>
+								  </div>
+								</div>
+							</form>
+		      	</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

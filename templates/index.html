@@ -1,0 +1,41 @@
+{% extends "indexchat.html" %}
+{% block body %}
+  <!-- Page Header -->
+  <!-- <div id="weatherapi-weather-widget-3"></div><script type='text/javascript' src='https://www.weatherapi.com/weather/widget.ashx?loc=166682&wid=3&tu=1&div=weatherapi-weather-widget-3' async></script><noscript><a href="https://www.weatherapi.com/weather/q/atusur-bangladesh-166682" alt="Hour by hour Atusur, Bangladesh weather">10 day hour by hour Atusur, Bangladesh weather</a></noscript> -->
+  <header class="masthead" style="margin-top:65px; ">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Auction Store</h1>
+            <span class="subheading">Something dirty for you, that will be precious for someone</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+<button class="openChatBtn" onclick="openForm()">Chat</button>
+<div class="openChat">
+<form action="/" method="POST" class="md-form">
+  <h1>Helpline</h1>
+  <label for="msg"><b>Message</b></label>
+  <textarea placeholder="message" name="msg" required></textarea>
+  <button type="submit" class="btn">Send</button>
+  <button type="button" class="btn close btn-primary" onclick="closeForm()">
+  Close
+  </button>
+</form>
+</div>
+<script>
+   document .querySelector(".openChatBtn") .addEventListener("click", openForm);
+   document.querySelector(".close").addEventListener("click", closeForm);
+   function openForm() {
+      document.querySelector(".openChat").style.display = "block";
+   }
+   function closeForm() {
+      document.querySelector(".openChat").style.display = "none";
+   }
+</script>
+</body>
+{% endblock %}

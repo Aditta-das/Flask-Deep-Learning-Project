@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>RTO Information</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+    function refreshIt(element) {
+        setTimeout(function() {
+            element.src = element.src.split('?')[0] + '?' + new Date().getTime();
+            refreshIt(element);
+        }, 2); // refresh every 50ms
+    }
+    </script>
+  </head>
+  <body>
+      <div class="container">
+        <center>
+          <h1>Beware of violating traffic rules!</h1>
+        </center>
+        <div class="col-md-3">
+  
+        <div class="row">
+        	<div class="col-md-9">
+					  <img src="{{ url_for('video_feed') }}" alt="" style="height:90%; width:85%" onload = "refreshIt(this)"/>
+					</div>
+          <!-- <div class="col-md-3">
+            <form action="/video_licence" method="POST" enctype="multipart/form-data" class="md-form">
+							<div class="file-field">
+							    <label class="btn btn-primary" style="margin: 12px;">
+							      <i class="fa fa-image"></i> Input Image Here<input type="file" name="file" style="display: none;">
+							    </label>
+							  <div class="file-path-wrapper" style="margin:8px;">
+							    <button type="submit" class="btn btn-dark btn-outline-success">DETECT BUTTON</button>
+							  </div>
+							</div>
+						</form>
+          </div> -->
+        </div>
+      </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+<video align="center" class="img-thumbnail" preload="auto" width="500" height="420" controls>
+  <source src="{{ frame }}" type="video/mp4">
+        Your browser does not support the video tag.
+</video>
+
+<img src="{{ url_for('video_') }}" width="100%"> -->

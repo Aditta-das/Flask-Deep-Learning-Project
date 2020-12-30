@@ -1,0 +1,36 @@
+{% extends "layer.html" %}
+{% block body %}
+
+  <!-- Page Header -->
+<header class="masthead2">
+  <div class="text-center" style="padding: 35px;">
+    <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-lg-4 col-md-4">
+        <div class="col">
+        <div class="site-heading">
+          <img src="{{ licence_name }}" class="img-thumbnail" alt="Responsive image" style="width: 20px; min-width: 400px; margin-top: 25px; min-height: 400px; max-height: 420px;" align="left">
+          <form action="/licence" method="POST" enctype="multipart/form-data" class="md-form">
+            <div class="file-field">
+                <label class="btn btn-primary" style="margin: 12px;">
+                  <i class="fa fa-image"></i> Input Image Here<input type="file" name="file" style="display: none;">
+                </label>
+              <div class="file-path-wrapper" style="margin:8px;">
+                <button type="submit" class="btn btn-dark btn-outline-success">DETECT BUTTON</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      </div>
+      
+      <div class="col-sm-8 col-lg-8 col-md-8">
+        <div class="licence_box" style="margin-left: 37px;">
+          <img src="{{ image }}" class="img-fluid-thumbnail" alt="Responsive image" style="width: 100%; min-width: 400px; margin-top: 25px; min-height: 400px; max-height: 420px;" align="left">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>   
+{% endblock %}

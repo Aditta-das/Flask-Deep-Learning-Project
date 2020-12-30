@@ -1,0 +1,57 @@
+{% extends "layer.html" %}
+{% block body %}
+
+  <!-- Page Header -->
+<header class="masthead2">
+  <div class="text-center" style="padding: 35px;">
+    <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-lg-4 col-md-4">
+        <div class="col">
+        <div class="site-heading">
+          <img src="{{ sfname }}" class="img-thumbnail" alt="Responsive image" style="width: 20px; min-width: 400px; margin-top: 25px; min-height: 400px; max-height: 420px;" align="left">
+          <form action="/person" method="POST" enctype="multipart/form-data" class="md-form">
+            <div class="file-field">
+                <label class="btn btn-primary" style="margin: 12px;">
+                  <i class="fa fa-image"></i> Input Image Here<input type="file" name="file" style="display: none;">
+                </label>
+              <div class="file-path-wrapper" style="margin:8px;">
+                <button type="submit" class="btn btn-dark btn-outline-success">DETECT BUTTON</button>
+              </div>
+            </div>
+          </form>
+          {% if b > 2 %}
+          <div class="alert alert-danger" role="alert">
+            <p style="color:#070a14">{{ b }} person detected</p>
+          </div>
+          {% else %}
+          <div class="alert alert-secondary" role="alert">
+            <p style="color:#070a14">{{ b }} person detected</p>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      </div>
+
+      <div class="col-sm-8 col-lg-8 col-md-8">
+        <div class="col">
+        <div class="site-heading" style="margin-top: 25px;">
+          <video align="center" class="img-thumbnail" preload="auto" width="500" height="420" controls="controls">
+            <source src="{{ url_for('static', filename='Astronauts.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <img src="{{ url_for('static', filename='img/aditta.jpg') }}" style="width: 80px; min-width: 80px; min-height: 80px; max-height: 80px;" class="img-thumbnail">
+      <img src="{{ url_for('static', filename='img/aditta.jpg') }}" style="width: 80px; min-width: 80px; min-height: 80px; max-height: 80px;" class="img-thumbnail">
+      <img src="{{ url_for('static', filename='img/aditta.jpg') }}" style="width: 80px; min-width: 80px; min-height: 80px; max-height: 80px;" class="img-thumbnail">
+      <img src="{{ url_for('static', filename='img/aditta.jpg') }}" style="width: 80px; min-width: 80px; min-height: 80px; max-height: 80px;" class="img-thumbnail">     
+      </div>
+      <div class="col">
+        
+      </div>
+    </div>
+  </div>
+</div>
+</header>   
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "indexchat.html" %}
+{% block body %}
+
+<div class="card-columns mx-auto d-flex justify-content-center col-8">
+	<div class="box" style="margin-top: 133px;">
+		<div class="row">
+		  <div class="col-sm-6 col-lg-6 col-md-6">
+		    <div class="card" style="width: 251px;">
+		      <div class="card-body">
+		      	<div class="text-center">
+		      		<h5 class="card-title">Face Recognition</h5>
+		      		<div class="col">
+		      			<img src="{{url_for('static', filename='img/face.png')}}" style="width: 87px;" align="middle">	
+		      		</div>
+		  	      <a href="/person_confirm" class="btn btn-primary" style="margin-top:12px;">Check Message</a>
+		      	</div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="col-sm-6 col-lg-6 col-md-6">
+		    <div class="card" style="width: 251px;">
+		      <div class="card-body">
+		      	<div class="text-center">
+		      		<h5 class="card-title">Entry List</h5>
+		      		<div class="col">
+		      			<img src="{{url_for('static', filename='img/attend.png')}}" style="width: 87px;" align="middle">
+		      		</div>			        
+		  	      <a href="#" class="btn btn-primary" style="margin-top:12px;">Check Entry</a>
+		      	</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+</div>
+{% endblock %}
